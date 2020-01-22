@@ -60,6 +60,33 @@ HTTP response will have statusCode `200` and contain the following JSON data str
 }
 ```
 
+
+Accepted attributes are:
+
+| Parameter           | Description                                                                               |
+|---------------------|-------------------------------------------------------------------------------------------|
+| `width`             | iFrame width                                                                              |
+| `height`            | iFrame height                                                                             |
+| `autorun`           | Whether to start the player (widget) automatically or display the preview and play button |
+| `closebutton`       | Show close button                                                                         |
+| `logo`              | Show Cappasity logo                                                                       |
+| `analytics`         | Enable analytics                                                                          |
+| `autorotate`        | Start automatic rotation                                                                  |
+| `autorotatetime`    | Rotation time of the full turn, seconds                                                   |
+| `autorotatedelay`   | Delay if rotation was interrupted, seconds                                                |
+| `autorotatedir`     | Autorotate direction (clockwise is `1`, counter-clockwise is `-1`)                        |
+| `hidefullscreen`    | Hide fullscreen view button                                                               |
+| `hideautorotateopt` | Hide autorotate button                                                                    |
+| `hidesettingsbtn`   | Hide settings button                                                                      |
+| `enableimagezoom`   | Enable zoom                                                                               |
+| `zoomquality`       | Zoom quality (SD is `1`, HD is `2`)                                                       |
+| `hidezoomopt`       | Hide zoom button                                                                          |
+| `uipadx`            | Horizontal (left, right) padding for player UI in pixels                                  |
+| `uipady`            | Vertical (top, bottom) padding for player UI in pixels                                    |
+| `enablestoreurl`    | Whether to enable link to the store page                                                  |
+| `storeurl`          | Link to the store page                                                                    |
+| `hidehints`         | Hide tutorial hints                                                                       |
+
 Use iframe code and insert it into your HTML
 
 ### List uploaded files
