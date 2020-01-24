@@ -60,6 +60,33 @@ HTTP response will have statusCode `200` and contain the following JSON data str
 }
 ```
 
+
+Accepted attributes are:
+
+| Parameter           | Type    | Default | Description                                                                               |
+|---------------------|---------|---------|-------------------------------------------------------------------------------------------|
+| `width`             | string  | '100%'  | iFrame width, px or %                                                                     |
+| `height`            | string  | '600px' | iFrame height, px or %                                                                    |
+| `autorun`           | boolean | false   | Whether to start the player (widget) automatically or display the preview and play button |
+| `closebutton`       | boolean | true    | Show close button                                                                         |
+| `logo`              | boolean | true    | Show Cappasity logo                                                                       |
+| `analytics`         | boolean | true    | Enable analytics                                                                          |
+| `autorotate`        | boolean | false   | Start automatic rotation                                                                  |
+| `autorotatetime`    | float   | 10      | Rotation time of the full turn, seconds                                                   |
+| `autorotatedelay`   | float   | 2       | Delay if rotation was interrupted, seconds                                                |
+| `autorotatedir`     | integer | 1       | Autorotate direction (clockwise is `1`, counter-clockwise is `-1`)                        |
+| `hidefullscreen`    | boolean | true    | Hide fullscreen view button                                                               |
+| `hideautorotateopt` | boolean | true    | Hide autorotate button                                                                    |
+| `hidesettingsbtn`   | boolean | false   | Hide settings button                                                                      |
+| `enableimagezoom`   | boolean | true    | Enable zoom                                                                               |
+| `zoomquality`       | integer | 1       | Zoom quality (SD is `1`, HD is `2`)                                                       |
+| `hidezoomopt`       | boolean | false   | Hide zoom button                                                                          |
+| `uipadx`            | integer | 0       | Horizontal (left, right) padding for player UI in pixels                                  |
+| `uipady`            | integer | 0       | Vertical (top, bottom) padding for player UI in pixels                                    |
+| `enablestoreurl`    | boolean | false   | Whether to enable link to the store page                                                  |
+| `storeurl`          | string  | ''      | Link to the store page                                                                    |
+| `hidehints`         | boolean | false   | Hide tutorial hints                                                                       |
+
 Use iframe code and insert it into your HTML
 
 ### List uploaded files
@@ -79,7 +106,7 @@ Below is description of accepted params:
 | Query         | order           |      ASC |        ASC, DESC | `?order=DESC`                   | Defaults to ascending |
 | Query         | offset          |        0 |     0 < offset   | `?offset=24`                    | Used for paginating |
 | Query         | limit           |       12 | 0 < limit <= 100 | `?limit=24`                     | Models per page |
-| Query         | filter          | `%7B%7D` |                  | `?filter=%7B%7D` | Used to filter response |
+| Query         | filter          | `%7B%7D` |                  | `?filter=%7B%7D`                | Used to filter response |
 | Query         | criteria        |       id |                  | `?criteria=uploadedAt`          | Sorts by this field |
 | Query         | shallow         |        0 |                  | `?shallow=1`                    | Please set to 1 to reduce traffic. It omits information about uploaded files |
 | Query         | owner           |          |                  | `?owner=cappasity`              | For public - can select any customer alias, for private - must supply auth token |
